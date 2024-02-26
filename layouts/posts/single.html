@@ -107,7 +107,7 @@
             <line x1="17.01" y1="12" x2="22.96" y2="12"></line>
           </svg>
 
-          <a href="{{ .Site.Params.gitUrl -}}/commit/{{ .GitInfo.Hash }}" target="_blank" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
+          <a href="{{ .Site.Params.gitUrl -}}/commit/{{ .GitInfo.Hash }}" target="_blank" rel="noopener" title="{{ .GitInfo.Subject }}">{{ .GitInfo.AbbreviatedHash }}</a>
           @ {{ if .Site.Params.dateformNum }}{{ dateFormat .Site.Params.dateformNum .GitInfo.AuthorDate.Local }}{{ else }}{{ dateFormat "2006-01-02" .GitInfo.AuthorDate.Local }}{{ end }}
         </p>
       {{- end }}

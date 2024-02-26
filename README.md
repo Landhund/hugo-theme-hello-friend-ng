@@ -6,25 +6,29 @@
 
 This theme was highly inspired by the [hello-friend](https://github.com/panr/hugo-theme-hello-friend) and [hermit](https://github.com/Track3/hermit). A lot of kudos for their great work.
 
+I (Felix Dreier) have then forked [rhazdon's](https://github.com/rhazdon/hugo-theme-hello-friend-ng) version of it and modified it to fit my needs.
+
 ---
 
 ## Table of Contents
 
-- [Features](#features)
-- [How to start](#how-to-start)
-- [How to configure](#how-to-configure)
-- [More](#more-things)
-  - [Built in shortcodes](#built-in-shortcodes)
-    - [image](#image)
-  - [Code highlighting](#code-highlighting)
-  - [Favicon](#favicon)
-  - [Audio Support](#audio-support)
-- [Social Icons](#social-icons)
-- [Known issues](#known-issues)
-- [How to edit the theme](#how-to-edit-the-theme)
-- [Changelog](CHANGELOG.md)
-- [Sponsoring](#sponsoring)
-- [Licence](#licence)
+- [Hello Friend NG](#hello-friend-ng)
+  - [General informations](#general-informations)
+  - [Table of Contents](#table-of-contents)
+  - [Features](#features)
+  - [How to start](#how-to-start)
+  - [How to configure](#how-to-configure)
+  - [More things](#more-things)
+    - [Built-in shortcodes](#built-in-shortcodes)
+      - [image](#image)
+    - [Code highlighting](#code-highlighting)
+    - [Favicon](#favicon)
+    - [Audio Support](#audio-support)
+  - [Social Icons:](#social-icons)
+  - [Known issues](#known-issues)
+  - [How to edit the theme](#how-to-edit-the-theme)
+  - [Support](#support)
+  - [Licence](#licence)
 
 ---
 
@@ -86,7 +90,7 @@ paginate     = 10
 
   # Enable sharing buttons, if you like
   enableSharingButtons = true
-  
+
   # Show a global language switcher in the navigation bar
   enableGlobalLanguageMenu = true
 
@@ -180,7 +184,7 @@ A large variety of social icons are available and can be configured like this:
   url = "<profile_URL>"
 ```
 
-Take a look into this [list](docs/svgs.md) of available icon options. 
+Take a look into this [list](docs/svgs.md) of available icon options.
 
 If you need another one, just open an issue or create a pull request with your wished icon. :)
 
@@ -201,13 +205,13 @@ Either you comment it out completely or you write the following in
 
 Just edit it. You don't need any node stuff. ;)
 
-## Sponsoring
+## Support
 
 If you like my work and if you think this project is worth to support it, just <br />
-<a href="https://www.buymeacoffee.com/djordjeatlialp" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
+<a href="https://www.buymeacoffee.com/felixdreie3" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-green.png" alt="Buy Me A Coffee" style="height: 51px !important;width: 217px !important;" ></a>
 
 ## Licence
 
-Copyright © 2019-2021 Djordje Atlialp
+Copyright © 2023-2024 Felix Dreier
 
 The theme is released under the MIT License. Check the [original theme license](https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md) for additional licensing information.
