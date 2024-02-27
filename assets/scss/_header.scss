@@ -1,3 +1,8 @@
+html {
+  // Needed because of the sticky scrollbar
+  scroll-padding-top: 4.5em;
+}
+
 .header {
   display: flex;
   align-items: center;
