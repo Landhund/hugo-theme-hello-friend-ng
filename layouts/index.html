@@ -11,8 +11,11 @@
 
             <h1>{{ .Site.Title }}</h1>
 
-            {{ partial "subtitle.html" . }}
+            <h3 class="subtitle">{{ partial "subtitle.html" . }}</h3>
 
+            <div>
+                {{ partial "latest-posts.html" . }}
+            </div>
             {{- with .Site.Params.social }}
                 <div>
                     {{ partial "social-icons.html" . }}

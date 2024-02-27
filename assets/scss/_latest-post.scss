@@ -1,0 +1,19 @@
+.latest {
+    display: flex;
+    &-post {
+        border-bottom: 1px grey dashed;
+        text-decoration: none;
+
+        &-title {
+            font-size: 1rem;
+            margin: 5px 0 5px 0;
+
+        }
+
+        &-day {
+            flex-shrink: 0;
+            margin-left: 1em;
+            @include dimmed;
+        }
+    }
+}
