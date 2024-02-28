@@ -1,0 +1,220 @@
+= Hello Friend NG for https://www.mad-cad-it.com/[Mad CAD IT]
+:toc: preamble
+
+
+This theme started out as a Fork of https://github.com/rhazdon/hugo-theme-hello-friend-ng[rhazdon's Hello Friend NG] Hugo theme.
+A big Thank You! to him for his excellent work!
+
+I've then forked it to modify it to fit my needs.
+While it _should_ work with most Hugo setups, it's not really intended to be used as-is by other blogs, mostly because I continuously tinker with it and make various changes.
+So if you like it, clone it into your own fork and enjoy!
+
+[,bash]
+----
+$ git clone https://github.com/Landhund/hugo-theme-hello-friend-ng.git themes/hello-friend-ng-mad-cad-it
+----
+
+== Disclaimer
+
+The rest of this Readme is essentially just rhazdon's readme.
+Most of it should still hold true, but at some point I'll have to really document the features I've changed and added.
+
+If you like it, I *strongly* recommend to look into https://github.com/rhazdon/hugo-theme-hello-friend-ng[rhazdon's original]!
+
+== Features
+
+* Theming: *dark/light mode*, depending on your system preferences or the users choice
+* Great reading experience thanks to https://rsms.me/inter/[*Inter font*], made by https://rsms.me/about/[Rasmus Andersson]
+* Nice code highlighting thanks to https://prismjs.com[*PrismJS*]
+* An easy way to modify the theme with Hugo tooling
+* Fully responsive
+* Support for audio in posts (thanks to https://github.com/talbotp[@talbotp])
+* Builtin (enableable/disableable) multilanguage menu
+* Support for social icons
+* Support for sharing buttons
+* Support for https://commento.io[Commento]
+* Support for https://plausible.io[Plausible] (thanks to https://github.com/Joffcom[@Joffcom])
+* Support for https://utteranc.es/[utterances] comment system
+
+== How to start
+
+You can download the theme manually by going to https://github.com/rhazdon/hugo-theme-hello-friend-ng.git and pasting it to `themes/hello-friend-ng` in your root directory.
+
+You can also clone it directly to your Hugo folder:
+
+
+If you don't want to make any radical changes, it's the best option, because you can get new updates when they are available.
+To do so, include it as a git submodule:
+
+[,bash]
+----
+$ git submodule add https://github.com/rhazdon/hugo-theme-hello-friend-ng.git themes/hello-friend-ng
+----
+
+== How to configure
+
+The theme doesn't require any advanced configuration.
+Just copy the following config file.
+To see all possible configurations, xref:docs/config.adoc[check the docs].
+Note: There are more options to configure.
+Take a look into the `config.toml` in `exampleSite`.
+
+[,toml]
+----
+baseurl      = "localhost"
+title        = "My Blog"
+languageCode = "en-us"
+theme        = "hello-friend-ng"
+paginate     = 10
+
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "A simple and beautiful blog"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+
+  # Show a global language switcher in the navigation bar
+  enableGlobalLanguageMenu = true
+
+  # Metadata mostly used in document's head
+  description = "My new homepage or blog"
+  keywords = "homepage, blog"
+  images = [""]
+
+[taxonomies]
+    category = "blog"
+    tag      = "tags"
+    series   = "series"
+
+[languages]
+  [languages.en]
+    title = "Hello Friend NG"
+    keywords = ""
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+
+  [languages.en.params]
+    subtitle  = "A simple theme for Hugo"
+
+    [languages.en.params.logo]
+      logoText = "hello friend ng"
+      logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "blog"
+    name       = "Blog"
+    url        = "/posts"
+----
+
+== More things
+
+=== Built-in shortcodes
+
+Of course you are able to use all default shortcodes from hugo (https://gohugo.io/content-management/shortcodes/).
+
+==== image
+
+Properties:
+
+* `src` (required)
+* `alt` (optional)
+* `position` (optional, default: `left`, options: [`left`, `center`, `right`])
+* `style`
+
+Example:
+
+[,golang]
+----
+{{< image src="/img/hello.png" alt="Hello Friend" position="center" style="border-radius: 8px;" >}}
+----
+
+=== Code highlighting
+
+By default the theme is using PrismJS to color your code syntax.
+All you need to do is to wrap you code like this:
+
+....
+
+``` html
+  // your code here
+```
+....
+
+=== Favicon
+
+Check the xref:docs/favicons.adoc[docs].
+
+=== Audio Support
+
+You wrote an article and recorded it?
+Or do you have a special music that you would like to put on a certain article?
+Then you can do this now without further ado.
+
+In your article add to your front matters part:
+
+[,yaml]
+----
+audio: path/to/file.mp3
+----
+
+== Social Icons:
+
+A large variety of social icons are available and can be configured like this:
+
+[,toml]
+----
+[[params.social]]
+  name = "<site>"
+  url = "<profile_URL>"
+----
+
+Take a look into this xref:docs/svgs.adoc[list] of available icon options.
+
+If you need another one, just open an issue or create a pull request with your wished icon.
+:)
+
+== Known issues
+
+There is a bug in Hugo that sometimes causes the main page not to render correctly.
+The reason is an empty taxonomy part.
+Related issue tickets: https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/14[!14] https://github.com/rhazdon/hugo-theme-hello-friend-ng/issues/59[!59].
+
+Either you comment it out completely or you write the following in
+
+[,toml]
+----
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+----
+
+== How to edit the theme
+
+Just edit it.
+You don't need any node stuff.
+;)
+
+== Support
+
+If you like my work and if you think this project is worth to support it, just + image:https://cdn.buymeacoffee.com/buttons/default-green.png[Buy Me A Coffee,217,link=https://www.buymeacoffee.com/felixdreie3]
+
+== Licence
+
+Copyright © 2023-2024 Felix Dreier
+
+The theme is released under the MIT License.
+Check the https://github.com/rhazdon/hugo-theme-hello-friend-ng/blob/master/LICENSE.md[original theme license] for additional licensing information.
