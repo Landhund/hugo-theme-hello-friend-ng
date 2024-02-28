@@ -268,15 +268,15 @@ pre {
     @media (prefers-color-scheme: dark) {
       color: inherit;
     }
-  
+
     @media (prefers-color-scheme: light) {
       color: #ccc;
     }
-  
+
     [data-theme=dark] & {
       color: inherit;
     }
-  
+
     [data-theme=light] & {
       color: #ccc;
     }
@@ -432,4 +432,14 @@ hr {
 // Prism JS Additionals
 .highlight {
   margin: 30px auto;
+}
+
+.title-cursor {
+  animation: cursor 1s infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .title-cursor  {
+      animation: none;
+  }
 }
