@@ -2,12 +2,19 @@
     border-collapse: separate;
     border: 0;
     background: none;
-    //width: 100%;
+    margin: 0px auto;
+    min-width: 300px;
+    td {
+        border: none;
+        .paragraph > p {
+            margin-top: 0px;
+        }
+    }
 }
 
 .admonitionblock > table td.icon {
     text-align: center;
-    width: 80px;
+    width: 60px;
     padding: 0%;
     font-size: 2em;
 }
@@ -26,7 +33,24 @@
 .admonitionblock > table td.content {
     padding-left: 1.125em;
     padding-right: 1.25em;
-    border-left: 1px solid #dddddf;
+    // Default
+    border-left
+    : 1px solid $light-table-color;
+    @media (prefers-color-scheme: dark) {
+        border-left: 1px solid $dark-table-color;
+    }
+
+    @media (prefers-color-scheme: light) {
+    border-left: 1px solid $light-table-color;
+    }
+
+    [data-theme=dark] & {
+    border-left: 1px solid $dark-table-color;
+    }
+
+    [data-theme=light] & {
+    border-left: 1px solid $light-table-color;
+    }
     //color: rgba(0, 0, 0, .6)
 }
 
