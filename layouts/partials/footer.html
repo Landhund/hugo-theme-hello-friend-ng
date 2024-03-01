@@ -4,20 +4,25 @@
             <div class="footer__content">
                 {{ if .Site.Params.footer.trademark }}
                     <span>
-                            &copy; {{ .Site.Params.footer.trademark }}
+                        &copy; {{ .Site.Params.footer.trademark }}
                     </span>
                 {{ end }}
                 {{ if .Site.Params.footer.author }}
                     <span>
                             <a href="mailto:{{ .Site.Params.Author.email }}">
-                                    <i class="fa-regular fa-envelope" style="color: #a9a9b3; /* TODO: figure out how to reference the defined theme color */"></i>
-                                    {{ .Site.Params.Author.name }}
-                            </a>
+                                <i class="fa-regular fa-envelope" style="color: #a9a9b3; /* TODO: figure out how to reference the defined theme color */"></i></a>
+                            <a href="mailto:{{ .Site.Params.Author.email }}">{{ .Site.Params.Author.name }}</a>
                     </span>
                 {{ end }}
                 {{ if .Site.Params.footer.copyright }}
                     <span>
                             {{ .Site.Copyright| safeHTML }}
+                    </span>
+                {{ end }}
+                {{ if .Site.Params.gitURL }}
+                    <span>
+                        <a href="{{ .Site.Params.gitURL }}"><i class="fa-brands fa-github" style="color: #a9a9b3; /* TODO: figure out how to reference the defined theme color */"></i></a>
+                        <a href="{{ .Site.Params.gitURL }}"></a>
                     </span>
                 {{ end }}
                 {{ if .Site.Params.footer.rss }}
@@ -27,8 +32,7 @@
                                         <path d="M4 11a9 9 0 0 1 9 9"></path>
                                         <path d="M4 4a16 16 0 0 1 16 16"></path>
                                         <circle cx="5" cy="19" r="1"></circle>
-                                </svg> RSS-Feed
-                            </a>
+                                </svg></a>
                         </span>
                 {{ end }}
                 {{ range .Site.Params.footer.topText }}
