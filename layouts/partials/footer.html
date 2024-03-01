@@ -10,7 +10,7 @@
                 {{ if .Site.Params.footer.author }}
                     <span>
                             <a href="mailto:{{ .Site.Params.Author.email }}">
-                                <i class="fa-regular fa-envelope" style="color: #a9a9b3; /* TODO: figure out how to reference the defined theme color */"></i></a>
+                                <i class="fa-regular fa-envelope" style="color: currentColor;"></i></a>
                             <a href="mailto:{{ .Site.Params.Author.email }}">{{ .Site.Params.Author.name }}</a>
                     </span>
                 {{ end }}
@@ -21,7 +21,7 @@
                 {{ end }}
                 {{ if .Site.Params.gitURL }}
                     <span>
-                        <a href="{{ .Site.Params.gitURL }}"><i class="fa-brands fa-github" style="color: #a9a9b3; /* TODO: figure out how to reference the defined theme color */"></i></a>
+                        <a href="{{ .Site.Params.gitURL }}"><i class="fa-brands fa-github" style="color: currentColor;"></i></a>
                         <a href="{{ .Site.Params.gitURL }}"></a>
                     </span>
                 {{ end }}
