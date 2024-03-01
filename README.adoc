@@ -210,7 +210,8 @@ You don't need any node stuff.
 
 == Support
 
-If you like my work and if you think this project is worth to support it, just + image:https://cdn.buymeacoffee.com/buttons/default-green.png[Buy Me A Coffee,217,link=https://www.buymeacoffee.com/felixdreie3]
+If you like my work and if you think this project is worth to support it, just + 
+image:https://cdn.buymeacoffee.com/buttons/default-green.png[Buy Me A Coffee,217,link=https://www.buymeacoffee.com/felixdreie3]
 
 == Licence
 
