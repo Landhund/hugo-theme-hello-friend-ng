@@ -21,6 +21,13 @@
   &:hover {
     background: #dcdcdc;
   }
+
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-corner {
+  background: #888;
+  border-radius: 8px;
 }
 
 html {
