@@ -11,6 +11,6 @@ Prism.plugins.toolbar.registerButton('Expand_Collapse', {
 });
 
 
-Prism.plugins.toolbar.registerButton('Filler', {
-	text: '  ', // required
-});
+// Prism.plugins.toolbar.registerButton('Filler', {
+// 	text: '  ', // required
+// });
