@@ -1,9 +1,10 @@
 /* PrismJS 1.29.0
-https://prismjs.com/download.html#themes=prism-tomorrow&languages=markup+css+clike+javascript+arduino+asciidoc+autohotkey+bash+c+cpp+css-extras+csv+dart+docker+git+http+hpkp+hsts+ini+java+javadoclike+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+latex+log+makefile+markdown+mermaid+powershell+regex+ruby+rust+sass+scss+shell-session+sql+toml+typescript+typoscript+wiki+yaml&plugins=line-numbers+autolinker+file-highlight+show-language+highlight-keywords+previewers+keep-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+match-braces */
+https://prismjs.com/download.html#themes=prism-okaidia&languages=markup+css+clike+javascript+arduino+asciidoc+autohotkey+bash+c+cpp+css-extras+csv+dart+docker+git+http+hpkp+hsts+ini+java+javadoclike+jsdoc+js-extras+json+json5+jsonp+jsstacktrace+js-templates+latex+log+makefile+markdown+mermaid+powershell+regex+ruby+rust+sass+scss+shell-session+sql+toml+typescript+typoscript+wiki+yaml&plugins=line-numbers+autolinker+file-highlight+show-language+highlight-keywords+previewers+keep-markup+normalize-whitespace+data-uri-highlight+toolbar+copy-to-clipboard+match-braces */
 code[class*=language-],
 pre[class*=language-] {
-    color: #ccc;
+    color: #f8f8f2;
     background: 0 0;
+    text-shadow: 0 1px rgba(0, 0, 0, .3);
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     font-size: 1em;
     text-align: left;
@@ -30,7 +31,7 @@ pre[class*=language-] {
 
 :not(pre)>code[class*=language-],
 pre[class*=language-] {
-    background: #2d2d2d
+    background: #272822
 }
 
 :not(pre)>code[class*=language-] {
@@ -39,62 +40,66 @@ pre[class*=language-] {
     white-space: normal
 }
 
-.token.block-comment,
 .token.cdata,
 .token.comment,
 .token.doctype,
 .token.prolog {
-    color: #999
+    color: #8292a2
 }
 
 .token.punctuation {
-    color: #ccc
+    color: #f8f8f2
 }
 
-.token.attr-name,
+.token.namespace {
+    opacity: .7
+}
+
+.token.constant,
 .token.deleted,
-.token.namespace,
+.token.property,
+.token.symbol,
 .token.tag {
-    color: #e2777a
-}
-
-.token.function-name {
-    color: #6196cc
+    color: #f92672
 }
 
 .token.boolean,
-.token.function,
 .token.number {
-    color: #f08d49
+    color: #ae81ff
 }
 
-.token.class-name,
-.token.constant,
-.token.property,
-.token.symbol {
-    color: #f8c555
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.selector,
+.token.string {
+    color: #a6e22e
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable {
+    color: #f8f8f2
 }
 
 .token.atrule,
-.token.builtin,
-.token.important,
-.token.keyword,
-.token.selector {
-    color: #cc99cd
-}
-
 .token.attr-value,
-.token.char,
-.token.regex,
-.token.string,
-.token.variable {
-    color: #7ec699
+.token.class-name,
+.token.function {
+    color: #e6db74
 }
 
-.token.entity,
-.token.operator,
-.token.url {
-    color: #67cdcc
+.token.keyword {
+    color: #66d9ef
+}
+
+.token.important,
+.token.regex {
+    color: #fd971f
 }
 
 .token.bold,
@@ -108,10 +113,6 @@ pre[class*=language-] {
 
 .token.entity {
     cursor: help
-}
-
-.token.inserted {
-    color: green
 }
 
 pre[class*=language-].line-numbers {
