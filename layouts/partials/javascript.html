@@ -1,8 +1,11 @@
 {{ $main := resources.Get "js/main.js" }}
 {{ $menu := resources.Get "js/menu.js" }}
-{{ $prism := resources.Get "js/prism.js" }}
-{{ $expand_collapse := resources.Get "js/expand_collapse.js"}}
-{{ $secureJS := slice $main $menu $prism $expand_collapse | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
+{{/*  {{ $prism := resources.Get "js/prism.js" }}  */}}
+{{/*  {{ $expand_collapse := resources.Get "js/expand_collapse.js"}}  */}}
+{{ $highlight := resources.Get "js/highlight.js" }}
+{{ $highlight_all := resources.Get "js/highlight-all.js" }}
+{{ $highlight_copy := resources.Get "js/highlight-copy.js" }}
+{{ $secureJS := slice $main $menu $highlight $highlight_all $highlight_copy | resources.Concat "bundle.js" | resources.Minify | resources.Fingerprint "sha512" }}
 <script type="text/javascript" src="{{ $secureJS.RelPermalink }}" integrity="{{ $secureJS.Data.Integrity }}"></script>
 
 {{ range $val := $.Site.Params.customJS }}
