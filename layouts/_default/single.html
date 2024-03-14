@@ -38,6 +38,7 @@
 
       <div class="post-info">
           {{ partial "publish-date" . }}
+          {{ partial "series-info" . }}
       </div>
 
       {{- if .Params.toc }}
@@ -57,7 +58,7 @@
         </div>
       {{ end }}
 
-      <div class="post-content line-numbers">
+      <div class="post-content">
         {{ .Content }}
       </div>
     </article>
